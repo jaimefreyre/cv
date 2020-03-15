@@ -1,0 +1,117 @@
+mat-sidenav{
+  width: 80% !important;
+  padding: 5%; 
+}
+.curriculum{
+  display: block;
+  overflow-y: scroll;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  color: white;
+  font-weight: 500;
+}
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+}
+.cien{
+  height: 95%;
+}
+.full{
+  height: 100%;
+}
+.informacion{
+  position: relative;
+}
+.Fondo-Rosa{
+  /*background-color: #e91e63;*/
+  background-color: black;
+  color: white;
+  border: 1px solid transparent;
+}
+.W40p{
+  width: 40%;
+}
+.example-events {
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+  border: 1px solid #555;
+}
+.cerrarBtn{
+      display: block;
+    position: absolute;
+    background-color: black;
+    right: 0px;
+    top: 0px;
+    margin: 5px;
+    width: 45px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 2px;
+    border: none;
+    text-align: center;
+    padding: 7px;
+}
+.ccd{
+    position: absolute !important;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    z-index: 50;
+}
+.pst{
+  /*border-right: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+  text-shadow: 4px 2px 4px black;
+  box-shadow: 1px 1px 1px black;
+  */
+  padding: 10px;
+  border-radius: 4px;
+  margin: 2px;
+}
+.titulo2{
+  font-size: 3em;
+  color: white;
+  text-align: center;
+  line-height: 85%;
+}
+.cntro{position: relative; clear: left; margin: 0px; }
+.caja{ width: 48%; margin-right: 10px; padding: 15px;  display: inline-table;}
+.anchototal { width: 100%; }
+.oculto{display: none;}
+.visible{display: block;}
+.selectResponsive{display: none;}
+
+@media (max-width: 700px) { 
+  mat-sidenav{
+    padding: 10%;
+  }
+  app-informacion{
+    position: relative;
+    top: 25px;
+  }
+  .caja{
+    width: 100% !important;
+  }
+  .cien{
+    height: 100% !important;
+  }
+  .selectResponsive{display: block;}
+  .AVATAR{
+    display: none;
+  }
+  .navbar-brand{
+    display: none;
+  }
+  .iCel{
+    display: block;
+    color: white;
+  }
+
+}

@@ -1,0 +1,124 @@
+<mat-sidenav-container class="example-container">
+	<mat-sidenav autosize #sidenav class="W40p cien" mode="push" start="right" 
+	[(opened)]="opened" (opened)="this.verificaSesion()">
+	  
+	   <app-bio class="bebas" *ngIf="this.vista == 1"></app-bio>	
+	   <app-cotizar *ngIf="this.vista == 2"></app-cotizar>	
+	   <app-proyectos *ngIf="this.vista == 3" [(info_proyecto)]="this.infoProyecto"></app-proyectos>	
+	   
+	   <button class="cerrarBtn"  
+	   (click)="sidenav.close();"> 
+		  	<i class="material-icons">close</i>
+	   </button>
+	
+	</mat-sidenav>
+	  
+	<mat-sidenav-content>
+		<div class="container-fluid cien">	
+			<div class="row cien">
+				<div class="col-md-4 col-xs-12 cien">
+					<app-informacion 
+						indicator="1"
+						[(info)]="this.Biografia" 
+						(abrir)="sidenav.open();" 
+						(cerrar)="sidenav.close();" 
+						(item)="seleccionarVista($event)">
+					</app-informacion>
+				</div>
+				
+				<div class="col-md-8 col-xs-12 bg-primary curriculum full">
+					
+					<p class="alex titulo2">Informacion Personal</p>
+					<div class="cntro caja">
+						<app-contacto (item)="seleccionarVista($event); sidenav.open();"></app-contacto>
+					</div>
+					<div class="cntro caja">
+						<app-historial (item)="seleccionarVista($event); sidenav.open();"></app-historial>
+					</div>
+					<hr>
+					
+					<p class="bebasBold titulo2	">Conocimiento tecnico</p>
+					<p class="alex text-center">Infomacion de evaluaciones sobre el uso de tecnologias, frameworks y lenguajes</p>
+					<div *ngFor="let item of tecnologiasEvalua; let i = index" class="caja">
+					  <app-productos
+					  	[tipo]="item.Tipo"
+					  	[titulo]="item.Titulo"
+						[data]="item.Data"
+						[label]="item.Labels"
+						[option]="item.Opt">
+					  </app-productos>
+					  <hr>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</mat-sidenav-content>
+</mat-sidenav-container>
+<nav class="ccd navbar navbar-dark bg-success">
+	  <a class="navbar-brand pst bebas"
+	   	(click)="sidenav.open();seleccionarVista(3); creaInterface(1)" 
+	   	href="#">
+	  	Productos Exclusivos
+	  </a>
+	  <a class="navbar-brand pst alex" 
+	  	(click)="sidenav.open();seleccionarVista(3);creaInterface(2)" 
+	  	href="#">
+	  	App Manager</a>
+	  <a class="navbar-brand pst bebasBold" 
+		(click)="sidenav.open();seleccionarVista(3);creaInterface(3)" 
+		href="#">
+		Marketing Online</a>
+	  <a class="navbar-brand pst alex" 
+	  	(click)="sidenav.open();seleccionarVista(3);creaInterface(4)" 
+	  	href="#">
+	  	Envios and Uber</a>
+	  <a class="navbar-brand pst alex" 
+	  	(click)="sidenav.open();seleccionarVista(3);creaInterface(5)" 
+	  	href="#">
+	  	Inventario x Cien</a>
+	  <a class="navbar-brand pst alex" 
+	  	(click)="sidenav.open();seleccionarVista(3);creaInterface(6)" 
+	  	href="#">
+	  	Turneros</a>
+	  <a class="navbar-brand pst bebasBold" 
+	  	(click)="sidenav.open();seleccionarVista(3);creaInterface(7)" 
+	  	href="#">
+	  	Ecommerce</a>
+	  
+	  <a class="bebasBold selectResponsive iCel" href="#" (click)="verItems()">+ Productos</a>
+	  
+	  <div id="subMen" class="oculto" #subMenu>
+	  	<span class="cerrarBtn" (click)="ocultarItems();"><i class="material-icons">close</i></span>
+		
+		<a class="iCel bebasBold"
+			(click)="sidenav.open();accionItem(3);" 
+			href="#">
+			Exclusivos</a>
+		<a class="iCel bebas"
+			(click)="sidenav.open();accionItem(3);" 
+			href="#">
+			App Manager</a>
+		<a class="iCel bebasBold"
+			(click)="sidenav.open();accionItem(3);" 
+			href="#">
+			Ecommerce</a>
+		<a class="iCel bebasBold"
+			(click)="sidenav.open();accionItem(3);" 
+			href="#">
+			Marketing Online</a>
+		<a class="iCel bebas"
+			(click)="sidenav.open();accionItem(3);" 
+			href="#">
+			Envios and Uber</a>
+		<a class="iCel bebas"
+			(click)="sidenav.open();accionItem(3);" 
+			href="#">
+			Inventario x Cien</a>
+		<a class="iCel bebas"
+			(click)="sidenav.open();accionItem(3);" 
+			href="#">
+			Turneros</a>
+	  </div>
+</nav>
+	

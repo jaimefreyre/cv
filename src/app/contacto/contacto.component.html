@@ -1,0 +1,62 @@
+<mat-card class="example-card center bg-dark">
+  
+  <mat-card-header style="border-bottom: 1px solid white">
+    <mat-card-title class="alex titulo-card">
+    	Ezequiel Jaime Miceli
+	</mat-card-title>
+	
+    <mat-card-subtitle class="bebas item">06/02/1990</mat-card-subtitle>
+    <mat-card-subtitle class="bebasBold item">Nacionalidad: <span class="bebas">Argentino</span></mat-card-subtitle>
+    <mat-card-subtitle class="bebasBold item">Equipo de Futbol: <span class="bebas">River Plate</span></mat-card-subtitle>
+    <mat-card-subtitle class="alex item">Religion: 
+      <span class="bebas">Ateo</span>
+    </mat-card-subtitle>
+    <mat-card-subtitle class="bebasBold item " style="display: none;">Ideologia: 
+    	<span class="bebas">Existencialista. <span class="bebasBold">Progresista-> <span class="alex">  Feminista ( )</span></span>;</span>
+    </mat-card-subtitle>
+    <mat-card-subtitle>
+    <button mat-button (click)="item.next(1)" class="bebasBold botones_l bg-primary" style="display:inline;height: 45px; margin-top: 15px !important;">
+      Quien Soy?
+    </button>
+    </mat-card-subtitle>
+  
+  </mat-card-header>
+  
+  <mat-card-content>
+    <div style="width: 100%; display: block;">
+
+    </div>
+  </mat-card-content>
+  
+  <mat-card-actions>
+  	<mat-card-title class="bebasBold text-center titulo-card">
+    	Informacion de Contacto
+	    <mat-card-subtitle class="alex item" style="position: relative; top: 5px;">
+	    	Haz click en los botones para contactarme o solicitar ubicacion
+	    </mat-card-subtitle>
+	</mat-card-title>
+  
+	
+    <button mat-button class="alex bg-danger botones_l" (click)="item.next(2)">
+      <mat-icon>place</mat-icon>
+      <span>Direccion: </span>
+      <span class="text-white bebas">Gorostiaga 5835, Virrey del pino</span>
+    </button>
+    <br>
+    
+    <button mat-button class="bebas bg-warning botones_l" (click)="abrir('mailto:estudiobudapest@gmail.com')">
+      <mat-icon>email</mat-icon>
+      <span>Email :</span>
+      <span class="text-white bebas"> estudiobudapest@gmail.com</span>
+    </button>
+    <br>
+    
+    <button mat-button class="bebas bg-success botones_l" (click)="abrir('https://api.whatsapp.com/send?phone=541127527389')" >
+      <span>Whatsapp :</span>
+   	  <span class="bebas text-white">+541127527389</span>
+    </button>
+    <br>
+ 
+  </mat-card-actions>
+
+</mat-card>

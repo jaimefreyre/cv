@@ -1,0 +1,6 @@
+mat-card-header{border-bottom: 1px solid white;}
+mat-card-actions{position: relative; display: block; margin: 0; font-size: 15px !important;}
+mat-card-actions span{top: 25px !important;}
+.item{color: white; display: block; font-size: 15px; line-height: 80%;}
+.botones_l{margin: 5px !important; position: relative; color: white; top: -12px;}
+.titulo-card{font-size: 28px; line-height: 80%; text-align: left !important; margin-bottom: 25px!important; color: white;}

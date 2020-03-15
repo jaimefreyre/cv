@@ -1,0 +1,29 @@
+<mat-card class="example-card center bg-dark">
+  
+  <mat-card-header style="border-bottom: 1px solid white">
+    <mat-card-title class="bebasBold" style="font-size: 28px; text-align: left !important;">{{titulo}}</mat-card-title>
+    <mat-card-subtitle class="alex">Manejo Profesional</mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <div style="width: 100%; display: block; color: white !important;" *ngIf="ver">
+      <canvas
+          baseChart
+          [chartType]="tipo"
+          [datasets]="data"
+          [labels]="label"
+          [options]="option"
+          [legend]="true"
+          (chartClick)="onChartClick($event)">
+      </canvas>
+    </div>
+  </mat-card-content>
+  
+  <mat-card-actions>
+    <button mat-button class="bebasBold bg-success" style="margin: 10px;margin-left: 20px;" (click)="ver= !ver">
+      <span *ngIf="!ver">Ver</span>
+      <span *ngIf="ver">Ocultar</span>
+    </button>
+  </mat-card-actions>
+
+</mat-card>

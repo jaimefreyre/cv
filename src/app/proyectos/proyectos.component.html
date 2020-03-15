@@ -1,0 +1,28 @@
+
+<h4 style="font-family: alex;  font-size: 50px;">
+  	{{info_proyecto.Titulo}}
+</h4>
+<small style="font-family: bebas;position: relative; top: -22px; font-size: 16px;">{{info_proyecto.Tipo}}</small>
+<hr>
+<p style="font-size: 14px; letter-spacing: -1px;">
+  {{info_proyecto.Descripcion}}
+</p>
+
+<h6 style="font-family: bebas; line-height: 25px;">
+	Aplicaciones y ejemplos de Monetizacion y uso
+</h6>
+
+<ul class="lista">
+    <li *ngFor="let item of info_proyecto.ejemplos" style="font-size: 24px; font-family: alex; line-height:18px;"  >{{item}}</li>
+</ul>
+<p 
+style="color: grey; position: relative; font-family: alex; text-align: right;"
+*ngIf="info_proyecto.Plazo > 0">
+  Tiempo de desarrollo: {{info_proyecto.Plazo}} Días.
+</p>
+
+<p 
+style="color: grey; position: relative; font-family: alex; text-align: right;" 
+*ngIf="info_proyecto.Plazo == 0">
+  Tiempo de desarrollo: Segun Requisitos.
+</p>

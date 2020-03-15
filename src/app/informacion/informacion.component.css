@@ -1,0 +1,72 @@
+.f_black{
+  background-color: black;
+  border-right: 1px white;
+}
+.example-card{
+  width: 100%;
+  height: 80%;
+  background-image:
+	  linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+  background-size: cover;
+  color: white;
+  display: inline-block;
+  /*margin: 5px;*/
+}
+
+.AVATAR{
+  background-image: url('../../assets/avatarBiop.png'),
+    linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) );
+  background-size: cover;
+  display: inline-block;
+  width: 60px;
+  height: 175px;
+  z-index: 50 !important;
+}
+
+.example-card mat-card-subtitle{
+  color: whitesmoke;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.tituloInfo{
+  position: relative;
+  display: block;
+  font-size: 100px;
+  line-height: 75px;
+}
+
+.subInfo{
+  position: relative;
+  display: block;
+  font-size: 30px;
+  line-height: 30px;
+	color: whitesmoke;
+}
+
+.clase_img{
+    width: 350px;
+    height: 300px;
+    position: relative;
+    left: 10px;
+    top: -15px;
+}
+
+@media (max-width: 700px) { 
+  .AVATAR{
+    display: none;
+  }
+  .clase_img{
+    width: 300px;
+    height: 250px;
+  }
+
+  .example-card{
+    width: 80%;
+    height: 100%;
+    position: relative;
+    left: -25px;
+  }
+ }

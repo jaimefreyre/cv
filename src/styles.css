@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
+@font-face { font-family: Open; src: local(“Open”), url('assets/Fonts/OpenSans-Light.woff') }
+@font-face { font-family: Open2; src: local(“Open”), url('assets/Fonts/OpenSans-Regular.woff') }
+@font-face { font-family: Open3; src: local(“Open”), url('assets/Fonts/OpenSans-SemiBold.woff') }
+@font-face { font-family: Open4; src: local(“Open”), url('assets/Fonts/OpenSans-Bold.woff') }
+@font-face { font-family: Alex; src: local(“Alex“), url('assets/Fonts/AlexBrush-Regular.woff') }
+@font-face { font-family: Bebas; src: local(“Bebas”), url('assets/Fonts/BebasNeue.woff') }
+@font-face { font-family: Bebas2; src: local(“Bebas”), url('assets/Fonts/BebasNeue-Bold.woff') }
+@font-face { font-family: Bebas Fina; src: local(“Bebas”), url('assets/Fonts/BebasNeue-Light.woff') }
+
+.alex{
+	font-family: Alex;
+}
+.bebas{
+	font-family: Bebas;
+}
+.bebasBold{
+	font-family: Bebas2;
+}
+.open{
+	font-family: Open;
+}
+
+.derecha{
+  position: relative !important;
+  left: 45px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
